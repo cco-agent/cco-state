@@ -18,19 +18,6 @@
       }
     },
     {
-      "name": "bluesky",
-      "command": "npx",
-      "args": [
-        "-y",
-        "bluesky-mcp-server"
-      ],
-      "description": "Bluesky MCP",
-      "env": {
-        "BLUESKY_HANDLE": "BLUESKY_HANDLE",
-        "BLUESKY_APP_PASSWORD": "BLUESKY_APP_PASSWORD"
-      }
-    },
-    {
       "name": "farcaster",
       "command": "node",
       "args": [
@@ -63,32 +50,6 @@
       "env": {
         "SOLANA_PRIVATE_KEY": "SOLANA_PRIVATE_KEY",
         "RPC_URL": "RPC_URL"
-      }
-    },
-    {
-      "name": "twitter",
-      "command": "node",
-      "args": [
-        "/opt/x-mcp/dist/index.js"
-      ],
-      "description": "Twitter MCP (INFATOSHI/x-mcp, OAuth 1.0a + v2, 15 tools)",
-      "env": {
-        "X_API_KEY": "X_API_KEY",
-        "X_API_SECRET": "X_API_SECRET",
-        "X_ACCESS_TOKEN": "X_ACCESS_TOKEN",
-        "X_ACCESS_TOKEN_SECRET": "X_ACCESS_TOKEN_SECRET",
-        "X_BEARER_TOKEN": "X_BEARER_TOKEN"
-      }
-    },
-    {
-      "name": "socialdata",
-      "command": "/opt/mcp/mcp-servers/socialdata/.venv/bin/python",
-      "args": [
-        "/opt/mcp/mcp-servers/socialdata/server.py"
-      ],
-      "description": "SocialData.tools MCP (read-only X/Twitter data: mentions, search, user lookup, timeline)",
-      "env": {
-        "SOCIALDATA_API_KEY": "SOCIALDATA_API_KEY"
       }
     },
     {
@@ -144,6 +105,37 @@
         "/opt/cco/mcp/video-audio-mcp/server.py"
       ],
       "env": {}
+    },
+    {
+      "name": "telegram",
+      "command": "/opt/mcp/telegram-mcp/.venv/bin/python",
+      "args": [
+        "/opt/mcp/telegram-mcp/main.py"
+      ],
+      "description": "Telegram MCP (chigwell/telegram-mcp, MTProto user account, 80+ tools)",
+      "env": {
+        "TELEGRAM_API_ID": "TELEGRAM_API_ID",
+        "TELEGRAM_API_HASH": "TELEGRAM_API_HASH",
+        "TELEGRAM_SESSION_STRING": "TELEGRAM_SESSION_STRING"
+      }
+    },
+    {
+      "name": "sns",
+      "command": "/opt/cco/mcp/sns-mcp/.venv/bin/python",
+      "args": [
+        "/opt/cco/mcp/sns-mcp/server.py"
+      ],
+      "description": "Unified SNS MCP (X 19 + Bluesky 15 + SocialData 30 tools, daily post caps)",
+      "env": {
+        "X_API_KEY": "X_API_KEY",
+        "X_API_SECRET": "X_API_SECRET",
+        "X_ACCESS_TOKEN": "X_ACCESS_TOKEN",
+        "X_ACCESS_TOKEN_SECRET": "X_ACCESS_TOKEN_SECRET",
+        "X_BEARER_TOKEN": "X_BEARER_TOKEN",
+        "BLUESKY_HANDLE": "BLUESKY_HANDLE",
+        "BLUESKY_APP_PASSWORD": "BLUESKY_APP_PASSWORD",
+        "SOCIALDATA_API_KEY": "SOCIALDATA_API_KEY"
+      }
     }
   ],
   "subagent": {
