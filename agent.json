@@ -145,16 +145,7 @@
     "max_turns": 3,
     "forced_model": "deepseek-v4-flash"
   },
-  "forbidden_models": [
-    "kimi-k2.6",
-    "deepseek-v4-pro",
-    "minimax-m3",
-    "glm-5",
-    "gpt-5",
-    "grok-3",
-    "claude-opus-4-7",
-    "claude-sonnet-4-6"
-  ],
+  "forbidden_models": [],
   "playbooks": [
     {
       "name": "welcome_new_member",
