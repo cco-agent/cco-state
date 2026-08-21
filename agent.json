@@ -165,5 +165,9 @@
       "system_prompt_tail": "Generate a token price/status report for #the-headline.",
       "max_turns": 4
     }
-  ]
+  ],
+  "discord": {
+    "dm_channel": "1533989303544185085",
+    "notification_channel": "1533989303544185085"
+  }
 }
